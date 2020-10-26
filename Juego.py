@@ -1,5 +1,5 @@
 #Rodrigo Henriquez A00827198
-#
+#Luis Angel Mendoza A00827838
 
 
 """Paint, for drawing shapes.
@@ -82,6 +82,8 @@ onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
+# Añadir un color
+onkey(lambda:color ('yellow'), 'Y')
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')
