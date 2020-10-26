@@ -1,3 +1,7 @@
+#Rodrigo Henriquez A00827198
+#
+
+
 """Paint, for drawing shapes.
 
 Exercises
@@ -7,12 +11,12 @@ Exercises
 3. Complete rectangle.
 4. Complete triangle.
 5. Add width parameter.
-
 """
 
 from turtle import *
 from freegames import vector
 
+#Funcion para dibujar una linea
 def line(start, end):
     "Draw line from start to end."
     up()
@@ -20,6 +24,7 @@ def line(start, end):
     down()
     goto(end.x, end.y)
 
+#funcion para dibujar un cuadrado
 def square(start, end):
     "Draw square from start to end."
     up()
@@ -33,18 +38,22 @@ def square(start, end):
 
     end_fill()
 
+#funcion para dibujar un cuadrado
 def circle(start, end):
     "Draw circle from start to end."
     pass  # TODO
 
+#funcion para dibujar un rectangulo
 def rectangle(start, end):
     "Draw rectangle from start to end."
     pass  # TODO
 
+#funcion para dibujar un triangulo
 def triangle(start, end):
     "Draw triangle from start to end."
     pass  # TODO
 
+#Funcion para guardar las posiciones de los clicks
 def tap(x, y):
     "Store starting point or draw shape."
     start = state['start']
@@ -57,10 +66,12 @@ def tap(x, y):
         shape(start, end)
         state['start'] = None
 
+#funcion para determinar la forma
 def store(key, value):
     "Store value in state at key."
     state[key] = value
 
+#Inicializa los valores de las figuras, colores y los clicks 
 state = {'start': None, 'shape': line}
 setup(420, 420, 370, 0)
 onscreenclick(tap)
