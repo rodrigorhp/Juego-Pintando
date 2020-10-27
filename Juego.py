@@ -15,6 +15,8 @@ Exercises
 
 from turtle import *
 from freegames import vector
+import turtle
+import math
 
 #Funcion para dibujar una linea
 def line(start, end):
@@ -41,8 +43,17 @@ def square(start, end):
 #funcion para dibujar un cuadrado
 def circle(start, end):
     "Draw circle from start to end."
-    pass  # TODO
+    t = turtle.Turtle()
 
+    t.penup()
+    t.setposition(start.x,start.y)
+    t.down()
+    begin_fill()
+    p1 = [start.x, start.y]
+    p2 = [end.x, end.y]
+    r = math.sqrt( ((p1[0]-p2[0])**2)+((p1[1]-p2[1])**2) )/2
+    t.circle(r) 
+    end_fill()
 #funcion para dibujar un rectangulo
 def rectangle(start, end):
     "Draw rectangle from start to end."
